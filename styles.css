@@ -379,3 +379,31 @@ header {
     color: var(--clr-secondary);
   }
   
+
+  /* About Us Section */
+.about-center {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .about-box {
+    background: var(--clr-white);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--light-shadow);
+    transition: var(--transition);
+  }
+  
+  .about-box h3 {
+    margin-bottom: 1rem;
+    color: var(--clr-primary-5);
+  }
+  
+  .about-box p {
+    color: var(--clr-grey-5);
+  }
+  
+  .about-box:hover {
+    box-shadow: var(--dark-shadow);
+  }
