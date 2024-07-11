@@ -448,3 +448,45 @@ header {
     font-size: 3rem;
     color: var(--clr-secondary);
 }
+
+/* Tours Section */ .tours-center {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.tour-box {
+    background: var(--clr-white);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--light-shadow);
+    transition: var(--transition);
+}
+
+.tour-box img {
+    border-radius: var(--radius);
+    margin-bottom: 1rem;
+}
+
+.tour-box h3 {
+    margin-bottom: 1rem;
+    color: var(--clr-primary-5);
+}
+
+.tour-box p {
+    color: var(--clr-grey-5);
+}
+
+.tour-box:hover {
+    box-shadow: var(--dark-shadow);
+}
+
+/* Responsive for larger screens */
+@media screen and (min-width: 768px) {
+
+    .about-center,
+    .services-center,
+    .tours-center {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
