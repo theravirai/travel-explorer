@@ -82,3 +82,38 @@ scrollLinks.forEach((link) => {
   });
 });
 // calculate heights
+
+// ********** Testimonials Carousel ************
+const testimonials = [
+  {
+    text: "This was the most amazing travel experience ever! Highly recommend!",
+    author: "Vandana Johnson",
+  },
+  {
+    text: "A perfect getaway with family. We had the best time!",
+    author: "Anjali Davis",
+  },
+  {
+    text: "The tour guides were very knowledgeable and helpful. Great experience!",
+    author: "Ravi Smith",
+  },
+  {
+    text: "Best vacation I’ve ever had. Stunning views and great service!",
+    author: "James Brown",
+  },
+];
+
+let currentTestimonial = 0;
+
+function updateTestimonial() {
+  const testimonialText = document.getElementById('testimonial-text');
+  const testimonialAuthor = document.getElementById('testimonial-author');
+
+  testimonialText.textContent = testimonials[currentTestimonial].text;
+  testimonialAuthor.textContent = `- ${testimonials[currentTestimonial].author}`;
+
+  currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+}
+
+// Change testimonials every 5 seconds
+setInterval(updateTestimonial, 5000);
