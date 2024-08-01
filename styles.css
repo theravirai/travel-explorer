@@ -449,7 +449,8 @@ header {
     color: var(--clr-secondary);
 }
 
-/* Tours Section */ .tours-center {
+/* Tours Section */
+.tours-center {
     display: grid;
     gap: 2rem;
     margin-top: 2rem;
@@ -495,42 +496,62 @@ header {
 .testimonials-container {
     text-align: center;
     margin-top: 2rem;
-  }
-  
-  .testimonial {
+}
+
+.testimonial {
     font-size: 1.2rem;
     color: var(--clr-grey-5);
     margin-bottom: 1rem;
-  }
-  
-  .author {
+}
+
+.author {
     font-size: 1rem;
     font-style: italic;
     color: var(--clr-primary-5);
-  }
+}
 
 
-  #about,
-  #services,
-  #tours {
+/* statistics */
+.stats-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.stat {
+    margin: 0 2rem;
+}
+
+.counter {
+    font-size: 3rem;
+    color: var(--clr-primary-5);
+}
+
+#about,
+#services,
+#tours {
     height: 80vh;
-  }
-  #services {
+}
+
+#services {
     background: var(--clr-white);
-  }
-  footer {
+}
+
+footer {
     background: var(--clr-grey-1);
     padding: 5rem 1rem;
-  }
-  footer p {
+}
+
+footer p {
     color: var(--clr-white);
     text-align: center;
     text-transform: capitalize;
     letter-spacing: var(--spacing);
     margin-bottom: 0;
-  }
-  
-  .top-link {
+}
+
+.top-link {
     font-size: 1.25rem;
     position: fixed;
     bottom: 3rem;
@@ -545,21 +566,23 @@ header {
     animation: bounce 2s ease-in-out infinite;
     visibility: hidden;
     z-index: -100;
-  }
-  .show-link {
+}
+
+.show-link {
     visibility: visible;
     z-index: 100;
-  }
-  
-  @keyframes bounce {
+}
+
+@keyframes bounce {
     0% {
-      transform: scale(1);
+        transform: scale(1);
     }
+
     50% {
-      transform: scale(1.5);
+        transform: scale(1.5);
     }
+
     100% {
-      transform: scale(1);
+        transform: scale(1);
     }
-  }
-    
+}
