@@ -117,3 +117,40 @@ function updateTestimonial() {
 
 // Change testimonials every 5 seconds
 setInterval(updateTestimonial, 5000);
+
+
+// ********** Animated Counters ************
+
+const counters = document.querySelectorAll('.counter');
+const speed = 200; // Adjust this value to control speed of the count
+
+function animateCounter() {
+  counters.forEach(counter => {
+    const updateCount = () => {
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.innerText;
+      const increment = target / speed;
+
+      if (count < target) {
+        counter.innerText = Math.ceil(count + increment);
+        setTimeout(updateCount, 1);
+      } else {
+        counter.innerText = target;
+      }
+    };
+    updateCount();
+  });
+}
+
+let statsSection = document.getElementById('statistics');
+let statsVisible = false;
+
+window.addEventListener('scroll', function () {
+  const statsTop = statsSection.getBoundingClientRect().top;
+  const windowHeight = window.innerHeight;
+
+  if (!statsVisible && statsTop < windowHeight - 100) {
+    animateCounter();
+    statsVisible = true;
+  }
+});
